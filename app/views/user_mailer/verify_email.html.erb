@@ -1,0 +1,4 @@
+<h1>Verify Your Email Address</h1>
+<p>Dear <%= @user.first_name %> <%= @user.last_name %>,</p>
+<p>Please click the following link to verify your email address:</p>
+<p><%= link_to 'Verify Email', api_v1_verify_email_url(@user.verification_token, host: 'localhost:3000') %></p>
